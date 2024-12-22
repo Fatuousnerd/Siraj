@@ -1,0 +1,73 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.navbar {
+    width: 100vw;
+    height: 70px;
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 0 30px;
+    position: fixed;
+    z-index: 99;
+
+    .tgl {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    .logo {
+        height: 80px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        align-items: center;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        .left,
+        .right {
+            display: flex;
+
+            ul {
+                display: flex;
+                gap: 50px;
+
+                // li{
+                //     &:hover{}
+                // }
+                a {
+                    &:hover {
+                        color: var(--HTextColor);
+                    }
+                }
+            }
+        }
+
+        .right {
+            gap: 25px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+}

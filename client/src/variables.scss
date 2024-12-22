@@ -1,0 +1,68 @@
+:root {
+    --MainBgColorLight: #f0f8ff;
+    --MainTextColorLight: #0A0A0A;
+    --SecBgColorLight: #F0F0F0;
+    --SecTextColorLight: #555555;
+    --HTextColorLight: #7A33FF;
+    --ContrastTextColorLight: #A382FF;
+
+    --DarkBgColor: #0A0A0A;
+    --DarkTextColor: #F8FFFF;
+    --SecDarkBgColor: #1C1C1C;
+    --SecDarkTextColor: #CCCCCC;
+    --HDarkTextColor: #A259FF;
+    --ContrastDarkTextColor: #D896FF;
+}
+
+
+body.light {
+    --MainBgColor: var(--MainBgColorLight);
+    --MainTextColor: var(--MainTextColorLight);
+    --SecBgColor: var(--SecBgColorLight);
+    --SecTextColor: var(--MainTextColorLight);
+    --HTextColor: var(--HTextColorLight);
+    --ContrastTextColor: var(--ContrastTextColorLight);
+}
+
+body.dark {
+    --MainBgColor: var(--DarkBgColor);
+    --MainTextColor: var(--DarkTextColor);
+    --SecBgColor: var(--SecDarkBgColor);
+    --SecTextColor: var(--SecDarkTextColor);
+    --HTextColor: var(--HDarkTextColor);
+    --ContrastTextColor: var(--ContrastDarkTextColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $MainBgColor:  #f0f8ff;
+// $MainTextColor: #101720;
+// $SecBgColor: #fffff0;
+// $SecTextColor:  #0B1215;
+// $HTextColor:  orange;
+// $ContrastTextColor: #FAF9F6;
+// $DarkBgColor: red;
+// $DarkTextColor: red;
+// $SecDarkBgColor: red;
+// $mainBgColor: red;

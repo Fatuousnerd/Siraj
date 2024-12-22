@@ -1,0 +1,134 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.contact {
+    height: 100vh;
+    position: relative;
+    top: 70px;
+    padding: 50px;
+
+    .title {
+        h1 {
+            font-weight: 900;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+
+        .info {
+            flex: 1;
+            border-left: 4.5px solid var(--HTextColor);
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 20px;
+
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                p {
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    &:hover {
+                        color: var(--HTextColor);
+                        transition: all ease-out .25s;
+                    }
+                }
+            }
+
+        }
+
+        .form {
+            flex: 1;
+            padding: 20px;
+            cursor: not-allowed;
+
+            form {
+                cursor: not-allowed;
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                background: var(--SecBgColor);
+
+                .holder {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        cursor: not-allowed;
+                    }
+
+                    input,
+                    textarea {
+                        margin-bottom: 20px;
+                        padding: 5px;
+                        border: none;
+                        border-bottom: 1px solid var(--HTextColor);
+                        outline: none;
+                        background: transparent;
+                        cursor: inherit;
+                        transition: all ease-out .5s;
+
+                        &::placeholder {
+                            color: var(--MainTextColor);
+                        }
+
+                        &:focus {
+                            background: rgba(255, 255, 255, .25);
+                            transition: all ease-out .5s;
+                        }
+                    }
+                }
+
+                button {
+                    background: var(--HTextColor);
+                    padding: 5px;
+                    text-transform: uppercase;
+                    font-weight: 750;
+                    cursor: inherit;
+
+                    &:hover {
+                        color: initial;
+                    }
+                }
+            }
+
+            &>* {
+                cursor: not-allowed !important;
+            }
+        }
+    }
+
+    @include mobile {
+        padding: 15px;
+
+        .title {
+            h1 {
+                text-align: center;
+            }
+        }
+
+        .wrapper {
+            flex-direction: column;
+
+            .form {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.about {
+    // background: gray;
+    height: 120vh;
+    position: relative;
+    top: 70px;
+    padding: 20px;
+    display: flex;
+
+    .image {
+        flex: 1;
+
+        div {
+            width: 500px;
+            height: 500px;
+            border-radius: 400px 500px 500px 50px;
+            background: var(--HTextColor);
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 400px 500px 500px 50px;
+            }
+        }
+    }
+
+    .text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .title {
+            h1 {
+                font-weight: 900;
+                font-size: 4rem;
+                text-transform: uppercase;
+            }
+        }
+
+        .stats {
+            display: flex;
+            gap: 50px;
+            padding: 0 20px;
+            justify-content: center;
+
+            .st {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background: var(--ContrastTextColor);
+                border-radius: 5px;
+                padding: 15px;
+                width: 130px;
+
+                span {
+                    font-size: 2.5rem;
+                    font-weight: 850;
+                }
+
+                p {
+                    font-weight: 670;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 50px;
+        height: 150vh;
+        justify-content: center;
+        top: 100px;
+
+        .image {
+
+            div {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+
+        .text {
+            // background: red;
+            flex: 3;
+
+            .title {
+                h1 {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+}

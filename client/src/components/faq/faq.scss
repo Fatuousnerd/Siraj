@@ -1,0 +1,128 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.faq {
+    height: 100vh;
+    position: relative;
+    top: 70px;
+    padding: 25px;
+
+    .wrapper {
+        display: flex;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+            padding: 0 50px;
+
+            h1 {
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 3.5rem;
+                margin-bottom: 50px;
+            }
+
+            a {
+                color: var(--HTextColor);
+            }
+        }
+
+        .acc {
+            flex: 1;
+
+            .accordion {
+                // background: var(--ContrastTextColor);
+                padding: 10px;
+
+                .open {
+                    border-radius: 5px;
+                    // background: #000;
+                }
+
+                .closed {
+                    // background: #fff;
+                    border-radius: 5px 5px 0 0;
+                }
+
+                button {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    text-align: left;
+                    background: var(--SecTextColor);
+                    padding: 15px;
+                    border-radius: 5px;
+
+                    &:hover {
+                        color: var(--SecTextColor);
+                    }
+
+                    .titl {
+                        font-size: 1.25rem;
+                        font-weight: 750;
+                    }
+
+                    span {
+                        transition: all 3s ease-out;
+                    }
+                }
+
+                .hld {
+                    // display: flex;
+                    // flex-direction: column;
+                    // gap: 50px;
+                    // // height: 100vh;
+                    // // padding: 20px;
+                    // background: gray;
+                    margin-bottom: 20px;
+                    display: grid;
+                    overflow: hidden;
+                    transition: all 3s ease-in-out;
+
+                    .active {
+                        padding: 7.5px;
+                        height: 110px;
+                        background: var(--SecBgColor);
+                        border-radius: 0 0 5px 5px;
+                        transition: all .25s ease-out;
+                    }
+
+                    .inactive {
+                        overflow-y: hidden;
+                        height: 0;
+                        border-radius: 0;
+                        transition: all .25s ease-out;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        padding: 10px;
+
+        .wrapper {
+            flex-direction: column;
+            gap: 50px;
+
+            .text {
+                padding: 0 20.5px;
+            }
+
+            .acc {
+                .accordion {
+                    .hld {
+                        .active {
+                            min-height: 170px;
+                            max-height: none;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

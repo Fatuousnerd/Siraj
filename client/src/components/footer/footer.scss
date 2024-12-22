@@ -1,0 +1,65 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.footer {
+    background: var(--SecBgColor);
+    height: 300px;
+    padding: 20px 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .text {
+        padding: 20px 100px;
+
+        h1 {
+            font-weight: 900;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .socials {
+        ul {
+            display: flex;
+            gap: 50px;
+
+            li {
+                a>* {
+                    &:hover {
+                        color: var(--HTextColor);
+                        transform: scale(1.25);
+                        transition: all ease-in-out .25s;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @include mobile {
+        padding: 10px;
+        height: 200px;
+
+        .text {
+            padding: 10px;
+            // background: red;
+
+            h1 {
+                font-weight: 900;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+        }
+
+        .socials {
+            padding: 0 25px;
+
+            ul {
+                gap: 30px;
+            }
+        }
+    }
+}
