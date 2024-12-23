@@ -1,5 +1,5 @@
 const express = require("express");
-const User = require("../models/user"); // Import the User model
+const User = require("../models/User"); // Import the User model
 const router = express.Router(); // Create a new router
 
 // POST route for Google OAuth
