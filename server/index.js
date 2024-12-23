@@ -3,12 +3,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 const bodyParser = require("body-parser");
+require('dotenv').config();
 
 const authRoutes = require("./routes/auth");
 const campaignRoutes = require("./routes/campaign");
 
 const app = express(); // Initialize an Express app
-const PORT = 5000; // Define the server port
+const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI; // Define the server port
 
 // Middleware to handle requests and responses
 app.use(cors()); // Allow cross-origin requests
@@ -18,7 +20,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Connect to MongoDB
 mongoose
-    .connect("mongodb+srv://calvinkmwaura:FatuousJamil@cluster0.rv4yc.mongodb.net/")
+    .connect(MONGO_URI, )
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.error("Error connecting to MongoDB:", err));
 
