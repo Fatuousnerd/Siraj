@@ -18,7 +18,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Connect to MongoDB
 mongoose
-    .connect("mongodb+srv://calvinkmwaura:Fatuous_1764@cluster0.rv4yc.mongodb.net/SIRAJ")
+    .connect("mongodb+srv://calvinkmwaura:FatuousJamil@cluster0.rv4yc.mongodb.net/")
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.error("Error connecting to MongoDB:", err));
 

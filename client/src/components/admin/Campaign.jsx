@@ -14,7 +14,7 @@ const Campaign = () => {
     useEffect(() => {
         const fetchTemplates = async () => {
             try {
-                const response = await axios.get("https://siraj-3mds.onrender.com/api/campaign");
+                const response = await axios.get("https://siraj-3mds.onrender.com/campaign");
                 setCampaigns(response.data); // Update state with fetched data
                 console.log("Admin Log", campaigns);
 
@@ -37,7 +37,7 @@ const Campaign = () => {
         if (!confirmDelete) return;
 
         try {
-            const response = await axios.delete(`https://siraj-3mds.onrender.com/api/templates/${campaignId}`);
+            const response = await axios.delete(`https://siraj-3mds.onrender.com/templates/${campaignId}`);
             if (response.status === 200) {
                 console.log('Template deleted successfully');
                 setCampaigns(campaigns.filter((campaign) => campaign._id !== campaignId)); // Update UI

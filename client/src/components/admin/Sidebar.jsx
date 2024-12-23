@@ -2,8 +2,10 @@ import ThemeToggle from '../../utils/ThemeTogggle'
 import { Link } from 'react-router-dom'
 import { Assessment, AttachMoney, Campaign, HomeRounded } from "@mui/icons-material"
 import Logoutbtn from '../auth/Logout'
+import CheckAuth from '../auth/checkAuth';
 
 const Sidebar = () => {
+    CheckAuth()
     return (
         <>
             <div className='h-[100vh] w-[260px] bg-[--SecBgColor] px-5 gap-5 flex flex-col justify-around '>

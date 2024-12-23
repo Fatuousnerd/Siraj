@@ -39,7 +39,7 @@ const Add = () => {
         console.log(formData);
 
         try {
-            const res = await axios.post("https://siraj-3mds.onrender.com/api/campaign", data, {
+            const res = await axios.post("https://siraj-3mds.onrender.com/campaign", data, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },

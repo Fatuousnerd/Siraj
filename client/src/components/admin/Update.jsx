@@ -22,7 +22,7 @@ const Update = () => {
     useEffect(() => {
         const fetchTemplate = async () => {
             try {
-                const response = await fetch(`https://siraj-3mds.onrender.com/api/campaign/${campaignId}`);
+                const response = await fetch(`https://siraj-3mds.onrender.com/campaign/${campaignId}`);
                 const data = await response.json();
                 
                 setFormData({
@@ -58,7 +58,7 @@ const Update = () => {
         e.preventDefault();
     
         try {
-            const response = await fetch(`https://siraj-3mds.onrender.com/api/campaign/${campaignId}`, {
+            const response = await fetch(`https://siraj-3mds.onrender.com/campaign/${campaignId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
