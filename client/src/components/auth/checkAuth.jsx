@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
-import { UserContext } from "./userContext";
+import { UserContext } from "../../utils/UserContext";
 
 export default function CheckAuth() {
     const location = useLocation();

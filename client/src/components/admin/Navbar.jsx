@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { UserContext } from '../auth/userContext';
+import { UserContext } from '../../utils/UserContext';
 
 const Navbar = () => {
   const location = useLocation();

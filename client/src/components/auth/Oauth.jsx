@@ -3,7 +3,7 @@ import { app } from "./firebase";
 import { Google } from '@mui/icons-material';
 import { useContext, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { UserContext } from './userContext';
+import { UserContext } from '../../utils/UserContext';
 
 const Oauth = () => {
 

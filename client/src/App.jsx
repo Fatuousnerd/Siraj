@@ -12,7 +12,7 @@ import ThemeProvider from "./utils/ThemeContext";
 import ScrollToSection from "./ScrollToSection";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from "./components/auth/Login";
-import { UserProvider } from "./components/auth/userContext";
+import { UserProvider } from "./utils/UserContext";
 
 const App = () => {
   return (

@@ -1,7 +1,7 @@
 import { Logout } from '@mui/icons-material';
 import React, { useContext } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
-import { UserContext } from './userContext';
+import { UserContext } from '../../utils/UserContext';
 
 const Logoutbtn = () => {
     const {setUser} = useContext(UserContext)
