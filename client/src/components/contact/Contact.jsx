@@ -37,8 +37,8 @@ const Contact = () => {
                             <p>Socials</p>
 
                             <Tooltip title="Instagram" placement='right'>
-                                <a href="">
-                                    <Instagram /> @instagram
+                                <a href="https://www.instagram.com/sirajcharity/" target='_blank'>
+                                    <Instagram /> @sirajcharity
                                 </a>
                             </Tooltip>
 

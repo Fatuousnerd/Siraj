@@ -14,7 +14,7 @@ const Footer = () => {
                 
                 <div className="socials">
                     <ul>
-                        <li><a href=""><Instagram/></a></li>
+                        <li><a href="https://www.instagram.com/sirajcharity/" target='_blank'><Instagram/></a></li>
                         <li><a href=""><X/></a></li>
                         <li><a href="mailto:sirajcharityfoundation@gmail.com"><Mail/></a></li>
                         <li><a href=""><YouTube/></a></li>

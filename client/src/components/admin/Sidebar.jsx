@@ -5,10 +5,10 @@ import Logoutbtn from '../auth/Logout'
 import CheckAuth from '../auth/checkAuth';
 
 const Sidebar = () => {
-    // CheckAuth()
+    CheckAuth()
     return (
         <>
-            <div className='h-[100vh] w-[260px] bg-[--SecBgColor] px-5 gap-5 flex flex-col justify-around '>
+            <div className='h-[100vh] fixed w-[260px] bg-[--SecBgColor] px-5 gap-5 flex flex-col justify-around '>
                 <div className="flex h-[60px] bg-red-500 "></div>
                 <div className="w-full flex flex-col gap-5">
                     <Link to="/admin/dashboard" className='flex items-center gap-3'><HomeRounded /> Dashboard</Link>

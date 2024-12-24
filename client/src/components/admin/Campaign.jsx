@@ -52,7 +52,7 @@ const Campaign = () => {
         <>
             <div className='flex flex-row'>
                 <Sidebar />
-                <div className="flex flex-col gap-5 p-5 w-[calc(100vw-260px)] relative ">
+                <div className="flex flex-col gap-5 p-5 w-[calc(100vw-260px)] left-[260px] relative ">
                     <Link to="/admin/add" className='flex items-center gap-3 w-[180px] p-2 hover:bg-[--SecBgColor] '><Add /> Add A Campaign</Link>
                     {campaigns.map((campaign) => (
                         <div key={campaign._id} className="flex items-center justify-between w-full min-h-[300px] bg-[--SecBgColor] p-5 gap-5 ">
