@@ -10,7 +10,8 @@ const Donation = () => {
     useEffect(() => {
         const fetchCampaigns = async () => {
             try {
-                const response = await axios.get("https://siraj-3mds.onrender.com/campaign");
+                // const response = await axios.get("http://localhost:5000/api/campaign");
+                const response = await axios.get("https://siraj-3mds.onrender.com/api/campaign");
                 setCampaigns(response.data); // Update state with fetched data
                 console.log(campaigns);
 

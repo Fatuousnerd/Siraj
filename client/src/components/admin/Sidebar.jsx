@@ -5,7 +5,7 @@ import Logoutbtn from '../auth/Logout'
 import CheckAuth from '../auth/checkAuth';
 
 const Sidebar = () => {
-    CheckAuth()
+    // CheckAuth()
     return (
         <>
             <div className='h-[100vh] w-[260px] bg-[--SecBgColor] px-5 gap-5 flex flex-col justify-around '>

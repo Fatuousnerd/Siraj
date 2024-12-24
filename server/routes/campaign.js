@@ -34,6 +34,8 @@ router.get("/", async (req, res) => {
     try {
         const campaigns = await Campaign.find(); // Fetch all templates from MongoDB
         res.status(200).json(campaigns); // Send the data back to the frontend
+        console.log("Campaigns: ", campaigns);
+
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: "Failed to fetch templates" });
@@ -46,7 +48,7 @@ router.get('/:id', async (req, res) => {
     try {
         const campaign = await Campaign.findById(req.params.id);
         console.log(campaign);
-        
+
         if (!campaign) {
             return res.status(404).json({ message: 'Campaign not found' });
         }

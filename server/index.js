@@ -21,6 +21,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // Connect to MongoDB
 mongoose
     .connect(MONGO_URI, )
+    // .connect("mongodb://localhost:27017/media", )
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.error("Error connecting to MongoDB:", err));
 
