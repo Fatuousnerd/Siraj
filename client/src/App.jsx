@@ -4,15 +4,15 @@ import Main from "./components/Main";
 import Merch from "./components/merch/Merch";
 import Faq from "./components/faq/Faq";
 import Contact from "./components/contact/Contact";
-import Admin from "./components/admin/Admin.jsx";
-import Campaign from "./components/admin/Campaign.jsx";
-import Update from "./components/admin/Update.jsx";
-import Add from "./components/admin/Add.jsx";
+import Admin from "./components/admin/Admin";
+import Campaign from "./components/admin/Campaign";
+import Update from "./components/admin/Update";
+import Add from "./components/admin/Add";
 import ThemeProvider from "./utils/ThemeContext";
-import ScrollToSection from "./ScrollToSection.jsx";
+import ScrollToSection from "./ScrollToSection";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from "./components/auth/Login.jsx";
-import { UserProvider } from "./components/auth/UserContext.jsx";
+import Login from "./components/auth/Login";
+import { UserProvider } from "./components/auth/userContext";
 
 const App = () => {
   return (
