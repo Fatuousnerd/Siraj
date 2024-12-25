@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Donation = () => {
     const [campaigns, setCampaigns] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchCampaigns = async () => {
@@ -13,15 +14,15 @@ const Donation = () => {
                 // const response = await axios.get("http://localhost:5000/api/campaign");
                 const response = await axios.get("https://siraj-3mds.onrender.com/api/campaign");
                 setCampaigns(response.data); // Update state with fetched data
-                console.log(campaigns);
-
+                setLoading(false); // Update loading state
             } catch (error) {
                 console.error("Error fetching campaigns:", error);
+                setLoading(false); // Update loading state
             }
         };
         fetchCampaigns();
     }, []);
-
+    if (loading) return <p>Loading Campaigns...</p>;
     return (
         <>
             <div className='bg-[--ContrastTextColor] lg:h-auto h-[280vh] relative top-[100px] flex flex-col px-[20px] lg:p-[50px] ' id='donate'>
